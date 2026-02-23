@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zenith Charm Roller</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <h1>Zenith Charm Roller</h1>
+      <form id="roller-form" class="controls">
+        <label>
+          Rarity
+          <select name="rarity" id="rarity">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5" selected>5</option>
+          </select>
+        </label>
+
+        <label>
+          Candle
+          <select name="tree" id="tree">
+            <option value="">No</option>
+          </select>
+        </label>
+
+        <button type="submit">Roll Charm</button>
+      </form>
+
+      <section id="result" class="result" aria-live="polite"></section>
+      <button id="upgrade-button" type="button" disabled>Upgrade</button>
+    </main>
+
+    <script type="module" src="./src/app.js"></script>
+  </body>
+</html>
