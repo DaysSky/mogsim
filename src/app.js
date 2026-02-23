@@ -1,4 +1,4 @@
-import { ZENITH_DATA } from "./zenith-data.js?v=20260223-1";
+import { ZENITH_DATA as STATIC_ZENITH_DATA } from "./zenith-data.js?v=20260223-1";
 
 const CHARM_BUDGET_PER_POWER = [2, 4, 7, 11, 16];
 const CHARM_BUDGET_PER_LEVEL = [2, 3, 4, 5, 6];
@@ -7,6 +7,23 @@ const WILDCARD_BUDGET_MODIFIER = 1.8;
 const WILDCARD_TREE_CAP_CHANCES = [0, 50, 30, 12, 5, 2, 1];
 const DEFAULT_LEVEL = 5;
 const MAX_ROLL_ATTEMPTS = 300;
+const ZENITH_EFFECTS_API_URL =
+	"https://api.playmonumenta.com/zenith_charm_effects";
+
+const TREE_KEY_BY_DISPLAY_NAME = new Map(
+	Object.entries(STATIC_ZENITH_DATA.treeDisplayNames).map(
+		([treeKey, displayName]) => [displayName.toUpperCase(), treeKey],
+	),
+);
+
+const EFFECT_METADATA_BY_KEY = new Map(
+	STATIC_ZENITH_DATA.effects.map((effect) => [
+		effectLookupKey(effect.abilityName, effect.effectName),
+		effect,
+	]),
+);
+
+const ZENITH_DATA = await loadZenithData();
 
 const RARITY_NAMES = {
 	1: "Common",
@@ -1046,6 +1063,133 @@ function renderError(message) {
 	error.className = "error";
 	error.textContent = message;
 	result.append(error);
+}
+
+async function loadZenithData() {
+	try {
+		const response = await fetch(ZENITH_EFFECTS_API_URL, {
+			cache: "no-store",
+		});
+		if (!response.ok) {
+			throw new Error(`API request failed (${response.status})`);
+		}
+
+		const payload = await response.json();
+		const apiEffects = Array.isArray(payload)
+			? payload
+			: Array.isArray(payload?.effects)
+				? payload.effects
+				: null;
+		if (!apiEffects || apiEffects.length === 0) {
+			throw new Error("API returned no effects");
+		}
+
+		const effects = apiEffects
+			.map((entry) => normalizeApiEffect(entry))
+			.filter((entry) => entry !== null);
+		if (effects.length === 0) {
+			throw new Error("API effects failed normalization");
+		}
+
+		return {
+			...STATIC_ZENITH_DATA,
+			effects,
+		};
+	} catch (error) {
+		console.warn(
+			"Unable to load live Zenith effect data; using bundled fallback.",
+			error,
+		);
+		return STATIC_ZENITH_DATA;
+	}
+}
+
+function normalizeApiEffect(entry) {
+	if (!entry || typeof entry !== "object") {
+		return null;
+	}
+
+	const abilityName = String(entry.ability || "").trim();
+	const effectName = String(entry.effectName || "").trim();
+	const tree = normalizeTreeKey(entry.tree);
+	const rarityValues = normalizeRarityValues(entry.rarityValues);
+	if (!abilityName || !effectName || !tree || rarityValues.length !== 5) {
+		return null;
+	}
+
+	const metadata = EFFECT_METADATA_BY_KEY.get(
+		effectLookupKey(abilityName, effectName),
+	);
+
+	return {
+		id: metadata?.id || makeFallbackEffectId(abilityName, effectName),
+		effectName,
+		abilityClass: metadata?.abilityClass || abilityName,
+		abilityName,
+		tree,
+		singleAbilityCharm:
+			typeof metadata?.singleAbilityCharm === "boolean"
+				? metadata.singleAbilityCharm
+				: true,
+		isOnlyPositive: Boolean(entry.isOnlyPositive),
+		isPercent: Boolean(entry.isPercent),
+		variance: numberOrDefault(entry.variance, 0),
+		effectCap: numberOrDefault(entry.effectCap, 0),
+		rarityValues,
+		maxRarity: clamp(numberOrDefault(entry.maxRarity, 5), 1, 5),
+	};
+}
+
+function normalizeTreeKey(value) {
+	if (typeof value !== "string") {
+		return null;
+	}
+
+	const normalized = value.trim().toUpperCase();
+	if (!normalized) {
+		return null;
+	}
+	if (STATIC_ZENITH_DATA.ownableTrees.includes(normalized)) {
+		return normalized;
+	}
+
+	return TREE_KEY_BY_DISPLAY_NAME.get(normalized) ?? null;
+}
+
+function normalizeRarityValues(values) {
+	if (!Array.isArray(values)) {
+		return [];
+	}
+
+	return values
+		.slice(0, 5)
+		.map((value) => numberOrDefault(value, 0));
+}
+
+function effectLookupKey(abilityName, effectName) {
+	return `${abilityName}::${effectName}`;
+}
+
+function makeFallbackEffectId(abilityName, effectName) {
+	return `${abilityName}_${effectName}`
+		.toUpperCase()
+		.replace(/[^A-Z0-9]+/g, "_")
+		.replace(/^_+|_+$/g, "");
+}
+
+function numberOrDefault(value, fallback) {
+	const number = Number(value);
+	return Number.isFinite(number) ? number : fallback;
+}
+
+function clamp(value, min, max) {
+	if (value < min) {
+		return min;
+	}
+	if (value > max) {
+		return max;
+	}
+	return value;
 }
 
 function splitEffectName(abilityName, effectName) {
