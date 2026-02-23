@@ -5,7 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Zenith Charm Roller</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="./src/styles.css?v=20260223-1" />
+    <script>
+      window.__assetVersion = Date.now().toString();
+      const stylesheet = document.createElement("link");
+      stylesheet.rel = "stylesheet";
+      stylesheet.href = `./src/styles.css?v=${window.__assetVersion}`;
+      document.head.append(stylesheet);
+    </script>
   </head>
   <body>
     <main class="page">
@@ -36,6 +42,11 @@
       <button id="upgrade-button" type="button" disabled>Upgrade</button>
     </main>
 
-    <script type="module" src="./src/app.js?v=20260223-1"></script>
+    <script>
+      const appScript = document.createElement("script");
+      appScript.type = "module";
+      appScript.src = `./src/app.js?v=${window.__assetVersion}`;
+      document.body.append(appScript);
+    </script>
   </body>
 </html>

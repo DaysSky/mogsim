@@ -1,4 +1,9 @@
-import { ZENITH_DATA as STATIC_ZENITH_DATA } from "./zenith-data.js?v=20260223-1";
+const APP_ASSET_VERSION =
+	new URL(import.meta.url).searchParams.get("v") ?? Date.now().toString();
+
+const { ZENITH_DATA: STATIC_ZENITH_DATA } = await import(
+	`./zenith-data.js?v=${encodeURIComponent(APP_ASSET_VERSION)}`,
+);
 
 const CHARM_BUDGET_PER_POWER = [2, 4, 7, 11, 16];
 const CHARM_BUDGET_PER_LEVEL = [2, 3, 4, 5, 6];
@@ -1067,7 +1072,7 @@ function renderError(message) {
 
 async function loadZenithData() {
 	try {
-		const response = await fetch(ZENITH_EFFECTS_API_URL, {
+		const response = await fetch(buildZenithEffectsApiUrl(), {
 			cache: "no-store",
 		});
 		if (!response.ok) {
@@ -1102,6 +1107,12 @@ async function loadZenithData() {
 		);
 		return STATIC_ZENITH_DATA;
 	}
+}
+
+function buildZenithEffectsApiUrl() {
+	const url = new URL(ZENITH_EFFECTS_API_URL);
+	url.searchParams.set("v", APP_ASSET_VERSION);
+	return url.toString();
 }
 
 function normalizeApiEffect(entry) {
