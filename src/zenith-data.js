@@ -19,6 +19,26 @@ export const ZENITH_DATA = {
   },
   "effects": [
     {
+      "id": "BOTTLED_SUNLIGHT_COOLDOWN",
+      "effectName": "Bottled Sunlight Cooldown",
+      "abilityClass": "BottledSunlight",
+      "abilityName": "Bottled Sunlight",
+      "tree": "DAWNBRINGER",
+      "singleAbilityCharm": true,
+      "isOnlyPositive": false,
+      "isPercent": true,
+      "variance": 3,
+      "effectCap": -30,
+      "rarityValues": [
+        -5,
+        -7.5,
+        -10,
+        -12.5,
+        -15
+      ],
+      "maxRarity": 5
+    },
+    {
       "id": "BOTTLED_SUNLIGHT_ABSORPTION_HEALTH",
       "effectName": "Bottled Sunlight Absorption Health",
       "abilityClass": "BottledSunlight",
@@ -75,6 +95,26 @@ export const ZENITH_DATA = {
         20,
         40,
         60
+      ],
+      "maxRarity": 5
+    },
+    {
+      "id": "DIVINE_BEAM_COOLDOWN",
+      "effectName": "Divine Beam Cooldown",
+      "abilityClass": "DivineBeam",
+      "abilityName": "Divine Beam",
+      "tree": "DAWNBRINGER",
+      "singleAbilityCharm": true,
+      "isOnlyPositive": false,
+      "isPercent": true,
+      "variance": 3,
+      "effectCap": -30,
+      "rarityValues": [
+        -5,
+        -7.5,
+        -10,
+        -12.5,
+        -15
       ],
       "maxRarity": 5
     },
@@ -235,6 +275,26 @@ export const ZENITH_DATA = {
         3,
         4,
         5
+      ],
+      "maxRarity": 5
+    },
+    {
+      "id": "ETERNAL_SAVIOR_COOLDOWN",
+      "effectName": "Eternal Savior Cooldown",
+      "abilityClass": "EternalSavior",
+      "abilityName": "Eternal Savior",
+      "tree": "DAWNBRINGER",
+      "singleAbilityCharm": true,
+      "isOnlyPositive": false,
+      "isPercent": true,
+      "variance": 3,
+      "effectCap": -30,
+      "rarityValues": [
+        -5,
+        -7.5,
+        -10,
+        -12.5,
+        -15
       ],
       "maxRarity": 5
     },
@@ -459,6 +519,46 @@ export const ZENITH_DATA = {
       "maxRarity": 5
     },
     {
+      "id": "LIGHTNING_BOTTLE_KILLS_PER_BOTTLE",
+      "effectName": "Lightning Bottle Kill Threshold",
+      "abilityClass": "LightningBottle",
+      "abilityName": "Lightning Bottle",
+      "tree": "DAWNBRINGER",
+      "singleAbilityCharm": true,
+      "isOnlyPositive": true,
+      "isPercent": false,
+      "variance": 0,
+      "effectCap": -1,
+      "rarityValues": [
+        0,
+        0,
+        0,
+        0,
+        -1
+      ],
+      "maxRarity": 5
+    },
+    {
+      "id": "RADIANT_BLESSING_COOLDOWN",
+      "effectName": "Radiant Blessing Cooldown",
+      "abilityClass": "RadiantBlessing",
+      "abilityName": "Radiant Blessing",
+      "tree": "DAWNBRINGER",
+      "singleAbilityCharm": true,
+      "isOnlyPositive": false,
+      "isPercent": true,
+      "variance": 3,
+      "effectCap": -30,
+      "rarityValues": [
+        -5,
+        -7.5,
+        -10,
+        -12.5,
+        -15
+      ],
+      "maxRarity": 5
+    },
+    {
       "id": "RADIANT_BLESSING_RADIUS",
       "effectName": "Radiant Blessing Radius",
       "abilityClass": "RadiantBlessing",
@@ -579,6 +679,26 @@ export const ZENITH_DATA = {
       "maxRarity": 5
     },
     {
+      "id": "SOOTHING_COMBOS_HIT_REQUIREMENT",
+      "effectName": "Soothing Combos Hit Requirement",
+      "abilityClass": "SoothingCombos",
+      "abilityName": "Soothing Combos",
+      "tree": "DAWNBRINGER",
+      "singleAbilityCharm": false,
+      "isOnlyPositive": true,
+      "isPercent": false,
+      "variance": 0,
+      "effectCap": -1,
+      "rarityValues": [
+        0,
+        0,
+        0,
+        0,
+        -1
+      ],
+      "maxRarity": 5
+    },
+    {
       "id": "SOOTHING_COMBOS_RANGE",
       "effectName": "Soothing Combos Range",
       "abilityClass": "SoothingCombos",
@@ -675,6 +795,26 @@ export const ZENITH_DATA = {
         1.5,
         2,
         2.5
+      ],
+      "maxRarity": 5
+    },
+    {
+      "id": "SPARK_OF_INSPIRATION_COOLDOWN",
+      "effectName": "Spark of Inspiration Cooldown",
+      "abilityClass": "SparkOfInspiration",
+      "abilityName": "Spark of Inspiration",
+      "tree": "DAWNBRINGER",
+      "singleAbilityCharm": true,
+      "isOnlyPositive": false,
+      "isPercent": true,
+      "variance": 4,
+      "effectCap": -30,
+      "rarityValues": [
+        -5,
+        -7.5,
+        -10,
+        -12.5,
+        -15
       ],
       "maxRarity": 5
     },
@@ -879,6 +1019,26 @@ export const ZENITH_DATA = {
       "maxRarity": 5
     },
     {
+      "id": "WARD_OF_LIGHT_COOLDOWN",
+      "effectName": "Ward of Light Cooldown",
+      "abilityClass": "WardOfLight",
+      "abilityName": "Ward of Light",
+      "tree": "DAWNBRINGER",
+      "singleAbilityCharm": true,
+      "isOnlyPositive": false,
+      "isPercent": true,
+      "variance": 3,
+      "effectCap": -30,
+      "rarityValues": [
+        -5,
+        -7.5,
+        -10,
+        -12.5,
+        -15
+      ],
+      "maxRarity": 5
+    },
+    {
       "id": "WARD_OF_LIGHT_HEALING",
       "effectName": "Ward of Light Healing",
       "abilityClass": "WardOfLight",
@@ -935,6 +1095,26 @@ export const ZENITH_DATA = {
         20,
         40,
         60
+      ],
+      "maxRarity": 5
+    },
+    {
+      "id": "BEASTS_CLAW_COOLDOWN",
+      "effectName": "Beast's Claw Cooldown",
+      "abilityClass": "BeastsClaw",
+      "abilityName": "Beast's Claw",
+      "tree": "EARTHBOUND",
+      "singleAbilityCharm": true,
+      "isOnlyPositive": false,
+      "isPercent": true,
+      "variance": 3,
+      "effectCap": -30,
+      "rarityValues": [
+        -5,
+        -7.5,
+        -10,
+        -12.5,
+        -15
       ],
       "maxRarity": 5
     },
@@ -1019,6 +1199,46 @@ export const ZENITH_DATA = {
       "maxRarity": 5
     },
     {
+      "id": "BULWARK_COOLDOWN",
+      "effectName": "Bulwark Cooldown",
+      "abilityClass": "Bulwark",
+      "abilityName": "Bulwark",
+      "tree": "EARTHBOUND",
+      "singleAbilityCharm": false,
+      "isOnlyPositive": false,
+      "isPercent": true,
+      "variance": 3,
+      "effectCap": -30,
+      "rarityValues": [
+        -5,
+        -7.5,
+        -10,
+        -12.5,
+        -15
+      ],
+      "maxRarity": 5
+    },
+    {
+      "id": "EARTHEN_COMBOS_HIT_REQUIREMENT",
+      "effectName": "Earthen Combos Hit Requirement",
+      "abilityClass": "EarthenCombos",
+      "abilityName": "Earthen Combos",
+      "tree": "EARTHBOUND",
+      "singleAbilityCharm": false,
+      "isOnlyPositive": true,
+      "isPercent": false,
+      "variance": 0,
+      "effectCap": -1,
+      "rarityValues": [
+        0,
+        0,
+        0,
+        0,
+        -1
+      ],
+      "maxRarity": 5
+    },
+    {
       "id": "EARTHEN_COMBOS_RESISTANCE_AMPLIFIER",
       "effectName": "Earthen Combos Resistance Amplifier",
       "abilityClass": "EarthenCombos",
@@ -1075,6 +1295,26 @@ export const ZENITH_DATA = {
         0.75,
         1,
         1.25
+      ],
+      "maxRarity": 5
+    },
+    {
+      "id": "EARTHEN_WRATH_COOLDOWN",
+      "effectName": "Earthen Wrath Cooldown",
+      "abilityClass": "EarthenWrath",
+      "abilityName": "Earthen Wrath",
+      "tree": "EARTHBOUND",
+      "singleAbilityCharm": true,
+      "isOnlyPositive": false,
+      "isPercent": true,
+      "variance": 3,
+      "effectCap": -30,
+      "rarityValues": [
+        -5,
+        -7.5,
+        -10,
+        -12.5,
+        -15
       ],
       "maxRarity": 5
     },
@@ -1179,6 +1419,26 @@ export const ZENITH_DATA = {
       "maxRarity": 5
     },
     {
+      "id": "EARTHQUAKE_COOLDOWN",
+      "effectName": "Earthquake Cooldown",
+      "abilityClass": "Earthquake",
+      "abilityName": "Earthquake",
+      "tree": "EARTHBOUND",
+      "singleAbilityCharm": true,
+      "isOnlyPositive": false,
+      "isPercent": true,
+      "variance": 3,
+      "effectCap": -30,
+      "rarityValues": [
+        -5,
+        -7.5,
+        -10,
+        -12.5,
+        -15
+      ],
+      "maxRarity": 5
+    },
+    {
       "id": "EARTHQUAKE_DAMAGE",
       "effectName": "Earthquake Damage",
       "abilityClass": "Earthquake",
@@ -1259,6 +1519,26 @@ export const ZENITH_DATA = {
       "maxRarity": 5
     },
     {
+      "id": "ENTRENCH_COOLDOWN",
+      "effectName": "Entrench Cooldown",
+      "abilityClass": "Entrench",
+      "abilityName": "Entrench",
+      "tree": "EARTHBOUND",
+      "singleAbilityCharm": true,
+      "isOnlyPositive": false,
+      "isPercent": true,
+      "variance": 3,
+      "effectCap": -30,
+      "rarityValues": [
+        -5,
+        -7.5,
+        -10,
+        -12.5,
+        -15
+      ],
+      "maxRarity": 5
+    },
+    {
       "id": "ENTRENCH_KNOCKBACK",
       "effectName": "Entrench Knockback",
       "abilityClass": "Entrench",
@@ -1315,6 +1595,26 @@ export const ZENITH_DATA = {
         0.75,
         1,
         1.25
+      ],
+      "maxRarity": 5
+    },
+    {
+      "id": "IRON_GRIP_COOLDOWN",
+      "effectName": "Iron Grip Cooldown",
+      "abilityClass": "IronGrip",
+      "abilityName": "Iron Grip",
+      "tree": "EARTHBOUND",
+      "singleAbilityCharm": true,
+      "isOnlyPositive": false,
+      "isPercent": true,
+      "variance": 3,
+      "effectCap": -30,
+      "rarityValues": [
+        -5,
+        -7.5,
+        -10,
+        -12.5,
+        -15
       ],
       "maxRarity": 5
     },
@@ -1439,6 +1739,26 @@ export const ZENITH_DATA = {
       "maxRarity": 5
     },
     {
+      "id": "TAUNT_COOLDOWN",
+      "effectName": "Taunt Cooldown",
+      "abilityClass": "Taunt",
+      "abilityName": "Taunt",
+      "tree": "EARTHBOUND",
+      "singleAbilityCharm": true,
+      "isOnlyPositive": false,
+      "isPercent": true,
+      "variance": 3,
+      "effectCap": -30,
+      "rarityValues": [
+        -5,
+        -7.5,
+        -10,
+        -12.5,
+        -15
+      ],
+      "maxRarity": 5
+    },
+    {
       "id": "TAUNT_DAMAGE_BONUS",
       "effectName": "Taunt Damage Bonus",
       "abilityClass": "Taunt",
@@ -1555,6 +1875,26 @@ export const ZENITH_DATA = {
         6,
         8,
         10
+      ],
+      "maxRarity": 5
+    },
+    {
+      "id": "APOCALYPSE_COOLDOWN",
+      "effectName": "Apocalypse Cooldown",
+      "abilityClass": "Apocalypse",
+      "abilityName": "Apocalypse",
+      "tree": "FLAMECALLER",
+      "singleAbilityCharm": true,
+      "isOnlyPositive": false,
+      "isPercent": true,
+      "variance": 3,
+      "effectCap": -30,
+      "rarityValues": [
+        -5,
+        -7.5,
+        -10,
+        -12.5,
+        -15
       ],
       "maxRarity": 5
     },
@@ -1699,6 +2039,26 @@ export const ZENITH_DATA = {
       "maxRarity": 5
     },
     {
+      "id": "FIREBALL_COOLDOWN",
+      "effectName": "Fireball Cooldown",
+      "abilityClass": "Fireball",
+      "abilityName": "Fireball",
+      "tree": "FLAMECALLER",
+      "singleAbilityCharm": true,
+      "isOnlyPositive": false,
+      "isPercent": true,
+      "variance": 3,
+      "effectCap": -30,
+      "rarityValues": [
+        -5,
+        -7.5,
+        -10,
+        -12.5,
+        -15
+      ],
+      "maxRarity": 5
+    },
+    {
       "id": "FIREBALL_DAMAGE",
       "effectName": "Fireball Damage",
       "abilityClass": "Fireball",
@@ -1779,6 +2139,26 @@ export const ZENITH_DATA = {
       "maxRarity": 5
     },
     {
+      "id": "FLAME_SPIRIT_COOLDOWN",
+      "effectName": "Flame Spirit Cooldown",
+      "abilityClass": "FlameSpirit",
+      "abilityName": "Flame Spirit",
+      "tree": "FLAMECALLER",
+      "singleAbilityCharm": true,
+      "isOnlyPositive": false,
+      "isPercent": true,
+      "variance": 3,
+      "effectCap": -30,
+      "rarityValues": [
+        -5,
+        -7.5,
+        -10,
+        -12.5,
+        -15
+      ],
+      "maxRarity": 5
+    },
+    {
       "id": "FLAME_SPIRIT_DAMAGE",
       "effectName": "Flame Spirit Damage",
       "abilityClass": "FlameSpirit",
@@ -1855,6 +2235,26 @@ export const ZENITH_DATA = {
         0,
         1,
         2
+      ],
+      "maxRarity": 5
+    },
+    {
+      "id": "FLAMESTRIKE_COOLDOWN",
+      "effectName": "Flamestrike Cooldown",
+      "abilityClass": "Flamestrike",
+      "abilityName": "Flamestrike",
+      "tree": "FLAMECALLER",
+      "singleAbilityCharm": true,
+      "isOnlyPositive": false,
+      "isPercent": true,
+      "variance": 3,
+      "effectCap": -30,
+      "rarityValues": [
+        -5,
+        -7.5,
+        -10,
+        -12.5,
+        -15
       ],
       "maxRarity": 5
     },
@@ -1959,6 +2359,26 @@ export const ZENITH_DATA = {
       "maxRarity": 5
     },
     {
+      "id": "IGNEOUS_RUNE_COOLDOWN",
+      "effectName": "Igneous Rune Cooldown",
+      "abilityClass": "IgneousRune",
+      "abilityName": "Igneous Rune",
+      "tree": "FLAMECALLER",
+      "singleAbilityCharm": true,
+      "isOnlyPositive": false,
+      "isPercent": true,
+      "variance": 3,
+      "effectCap": -30,
+      "rarityValues": [
+        -5,
+        -7.5,
+        -10,
+        -12.5,
+        -15
+      ],
+      "maxRarity": 5
+    },
+    {
       "id": "IGNEOUS_RUNE_DAMAGE",
       "effectName": "Igneous Rune Damage",
       "abilityClass": "IgneousRune",
@@ -2059,6 +2479,26 @@ export const ZENITH_DATA = {
       "maxRarity": 5
     },
     {
+      "id": "IGNEOUS_RUNE_ARMING_TIME",
+      "effectName": "Igneous Rune Arming Time",
+      "abilityClass": "IgneousRune",
+      "abilityName": "Igneous Rune",
+      "tree": "FLAMECALLER",
+      "singleAbilityCharm": true,
+      "isOnlyPositive": true,
+      "isPercent": false,
+      "variance": 0,
+      "effectCap": -1,
+      "rarityValues": [
+        0,
+        0,
+        0,
+        -0.5,
+        -1
+      ],
+      "maxRarity": 5
+    },
+    {
       "id": "PRIMORDIAL_MASTERY_DAMAGE_MODIFIER",
       "effectName": "Primordial Mastery Damage Multiplier",
       "abilityClass": "PrimordialMastery",
@@ -2075,6 +2515,26 @@ export const ZENITH_DATA = {
         4,
         5.5,
         7.5
+      ],
+      "maxRarity": 5
+    },
+    {
+      "id": "PYROBLAST_COOLDOWN",
+      "effectName": "Pyroblast Cooldown",
+      "abilityClass": "Pyroblast",
+      "abilityName": "Pyroblast",
+      "tree": "FLAMECALLER",
+      "singleAbilityCharm": true,
+      "isOnlyPositive": false,
+      "isPercent": true,
+      "variance": 3,
+      "effectCap": -30,
+      "rarityValues": [
+        -5,
+        -7.5,
+        -10,
+        -12.5,
+        -15
       ],
       "maxRarity": 5
     },
@@ -2179,6 +2639,26 @@ export const ZENITH_DATA = {
       "maxRarity": 5
     },
     {
+      "id": "VOLCANIC_COMBOS_COOLDOWN",
+      "effectName": "Volcanic Combos Cooldown",
+      "abilityClass": "VolcanicCombos",
+      "abilityName": "Volcanic Combos",
+      "tree": "FLAMECALLER",
+      "singleAbilityCharm": false,
+      "isOnlyPositive": false,
+      "isPercent": true,
+      "variance": 3,
+      "effectCap": -30,
+      "rarityValues": [
+        -5,
+        -7.5,
+        -10,
+        -12.5,
+        -15
+      ],
+      "maxRarity": 5
+    },
+    {
       "id": "VOLCANIC_COMBOS_DAMAGE",
       "effectName": "Volcanic Combos Damage",
       "abilityClass": "VolcanicCombos",
@@ -2235,6 +2715,26 @@ export const ZENITH_DATA = {
         3,
         4,
         5
+      ],
+      "maxRarity": 5
+    },
+    {
+      "id": "VOLCANIC_METEOR_COOLDOWN",
+      "effectName": "Volcanic Meteor Cooldown",
+      "abilityClass": "VolcanicMeteor",
+      "abilityName": "Volcanic Meteor",
+      "tree": "FLAMECALLER",
+      "singleAbilityCharm": true,
+      "isOnlyPositive": false,
+      "isPercent": true,
+      "variance": 3,
+      "effectCap": -30,
+      "rarityValues": [
+        -5,
+        -7.5,
+        -10,
+        -12.5,
+        -15
       ],
       "maxRarity": 5
     },
@@ -2299,6 +2799,26 @@ export const ZENITH_DATA = {
       "maxRarity": 5
     },
     {
+      "id": "AVALANCHE_COOLDOWN",
+      "effectName": "Avalanche Cooldown",
+      "abilityClass": "Avalanche",
+      "abilityName": "Avalanche",
+      "tree": "FROSTBORN",
+      "singleAbilityCharm": true,
+      "isOnlyPositive": false,
+      "isPercent": true,
+      "variance": 3,
+      "effectCap": -30,
+      "rarityValues": [
+        -5,
+        -7.5,
+        -10,
+        -12.5,
+        -15
+      ],
+      "maxRarity": 5
+    },
+    {
       "id": "AVALANCHE_DAMAGE",
       "effectName": "Avalanche Damage",
       "abilityClass": "Avalanche",
@@ -2355,6 +2875,26 @@ export const ZENITH_DATA = {
         0.75,
         1,
         1.25
+      ],
+      "maxRarity": 5
+    },
+    {
+      "id": "CRYOBOX_COOLDOWN",
+      "effectName": "Cryobox Cooldown",
+      "abilityClass": "Cryobox",
+      "abilityName": "Cryobox",
+      "tree": "FROSTBORN",
+      "singleAbilityCharm": true,
+      "isOnlyPositive": false,
+      "isPercent": true,
+      "variance": 3,
+      "effectCap": -30,
+      "rarityValues": [
+        -5,
+        -7.5,
+        -10,
+        -12.5,
+        -15
       ],
       "maxRarity": 5
     },
@@ -2435,6 +2975,26 @@ export const ZENITH_DATA = {
         2,
         2.5,
         3
+      ],
+      "maxRarity": 5
+    },
+    {
+      "id": "SNOWSTORM_COOLDOWN",
+      "effectName": "Snowstorm Cooldown",
+      "abilityClass": "Snowstorm",
+      "abilityName": "Snowstorm",
+      "tree": "FROSTBORN",
+      "singleAbilityCharm": true,
+      "isOnlyPositive": false,
+      "isPercent": true,
+      "variance": 3,
+      "effectCap": -30,
+      "rarityValues": [
+        -5,
+        -7.5,
+        -10,
+        -12.5,
+        -15
       ],
       "maxRarity": 5
     },
@@ -2555,6 +3115,26 @@ export const ZENITH_DATA = {
         4,
         5,
         6
+      ],
+      "maxRarity": 5
+    },
+    {
+      "id": "FRIGID_COMBOS_COOLDOWN",
+      "effectName": "Frigid Combos Cooldown",
+      "abilityClass": "FrigidCombos",
+      "abilityName": "Frigid Combos",
+      "tree": "FROSTBORN",
+      "singleAbilityCharm": false,
+      "isOnlyPositive": false,
+      "isPercent": true,
+      "variance": 3,
+      "effectCap": -30,
+      "rarityValues": [
+        -5,
+        -7.5,
+        -10,
+        -12.5,
+        -15
       ],
       "maxRarity": 5
     },
@@ -2699,6 +3279,26 @@ export const ZENITH_DATA = {
       "maxRarity": 5
     },
     {
+      "id": "ICE_BARRIER_COOLDOWN",
+      "effectName": "Ice Barrier Cooldown",
+      "abilityClass": "IceBarrier",
+      "abilityName": "Ice Barrier",
+      "tree": "FROSTBORN",
+      "singleAbilityCharm": true,
+      "isOnlyPositive": false,
+      "isPercent": true,
+      "variance": 3,
+      "effectCap": -30,
+      "rarityValues": [
+        -5,
+        -7.5,
+        -10,
+        -12.5,
+        -15
+      ],
+      "maxRarity": 5
+    },
+    {
       "id": "ICE_BARRIER_CAST_RANGE",
       "effectName": "Ice Barrier Cast Range",
       "abilityClass": "IceBarrier",
@@ -2815,6 +3415,26 @@ export const ZENITH_DATA = {
         5.6,
         7,
         8.4
+      ],
+      "maxRarity": 5
+    },
+    {
+      "id": "ICE_LANCE_COOLDOWN",
+      "effectName": "Ice Lance Cooldown",
+      "abilityClass": "IceLance",
+      "abilityName": "Ice Lance",
+      "tree": "FROSTBORN",
+      "singleAbilityCharm": true,
+      "isOnlyPositive": false,
+      "isPercent": true,
+      "variance": 3,
+      "effectCap": -30,
+      "rarityValues": [
+        -5,
+        -7.5,
+        -10,
+        -12.5,
+        -15
       ],
       "maxRarity": 5
     },
@@ -3019,6 +3639,26 @@ export const ZENITH_DATA = {
       "maxRarity": 5
     },
     {
+      "id": "PIERCING_COLD_COOLDOWN",
+      "effectName": "Piercing Cold Cooldown",
+      "abilityClass": "PiercingCold",
+      "abilityName": "Piercing Cold",
+      "tree": "FROSTBORN",
+      "singleAbilityCharm": true,
+      "isOnlyPositive": false,
+      "isPercent": true,
+      "variance": 3,
+      "effectCap": -30,
+      "rarityValues": [
+        -5,
+        -7.5,
+        -10,
+        -12.5,
+        -15
+      ],
+      "maxRarity": 5
+    },
+    {
       "id": "PIERCING_COLD_DAMAGE",
       "effectName": "Piercing Cold Damage",
       "abilityClass": "PiercingCold",
@@ -3055,6 +3695,26 @@ export const ZENITH_DATA = {
         4,
         5,
         6
+      ],
+      "maxRarity": 5
+    },
+    {
+      "id": "ADVANCING_SHADOWS_COOLDOWN",
+      "effectName": "Advancing Shadows Cooldown",
+      "abilityClass": "DepthsAdvancingShadows",
+      "abilityName": "Advancing Shadows",
+      "tree": "SHADOWDANCER",
+      "singleAbilityCharm": true,
+      "isOnlyPositive": false,
+      "isPercent": true,
+      "variance": 3,
+      "effectCap": -30,
+      "rarityValues": [
+        -5,
+        -7.5,
+        -10,
+        -12.5,
+        -15
       ],
       "maxRarity": 5
     },
@@ -3115,6 +3775,26 @@ export const ZENITH_DATA = {
         1.5,
         1.75,
         2
+      ],
+      "maxRarity": 5
+    },
+    {
+      "id": "BLADE_FLURRY_COOLDOWN",
+      "effectName": "Blade Flurry Cooldown",
+      "abilityClass": "BladeFlurry",
+      "abilityName": "Blade Flurry",
+      "tree": "SHADOWDANCER",
+      "singleAbilityCharm": true,
+      "isOnlyPositive": false,
+      "isPercent": true,
+      "variance": 3,
+      "effectCap": -30,
+      "rarityValues": [
+        -5,
+        -7.5,
+        -10,
+        -12.5,
+        -15
       ],
       "maxRarity": 5
     },
@@ -3219,6 +3899,26 @@ export const ZENITH_DATA = {
       "maxRarity": 5
     },
     {
+      "id": "CHAOS_DAGGER_COOLDOWN",
+      "effectName": "Chaos Dagger Cooldown",
+      "abilityClass": "ChaosDagger",
+      "abilityName": "Chaos Dagger",
+      "tree": "SHADOWDANCER",
+      "singleAbilityCharm": true,
+      "isOnlyPositive": false,
+      "isPercent": true,
+      "variance": 3,
+      "effectCap": -30,
+      "rarityValues": [
+        -5,
+        -7.5,
+        -10,
+        -12.5,
+        -15
+      ],
+      "maxRarity": 5
+    },
+    {
       "id": "CHAOS_DAGGER_DAMAGE_MULTIPLIER",
       "effectName": "Chaos Dagger Damage Multiplier",
       "abilityClass": "ChaosDagger",
@@ -3295,6 +3995,26 @@ export const ZENITH_DATA = {
         1,
         1.25,
         1.5
+      ],
+      "maxRarity": 5
+    },
+    {
+      "id": "CLOAK_OF_SHADOWS_COOLDOWN",
+      "effectName": "Cloak of Shadows Cooldown",
+      "abilityClass": "CloakOfShadows",
+      "abilityName": "Cloak of Shadows",
+      "tree": "SHADOWDANCER",
+      "singleAbilityCharm": true,
+      "isOnlyPositive": false,
+      "isPercent": true,
+      "variance": 3,
+      "effectCap": -30,
+      "rarityValues": [
+        -5,
+        -7.5,
+        -10,
+        -12.5,
+        -15
       ],
       "maxRarity": 5
     },
@@ -3399,6 +4119,26 @@ export const ZENITH_DATA = {
       "maxRarity": 5
     },
     {
+      "id": "DARK_COMBOS_HIT_REQUIREMENT",
+      "effectName": "Dark Combos Hit Requirement",
+      "abilityClass": "DarkCombos",
+      "abilityName": "Dark Combos",
+      "tree": "SHADOWDANCER",
+      "singleAbilityCharm": false,
+      "isOnlyPositive": true,
+      "isPercent": false,
+      "variance": 0,
+      "effectCap": -1,
+      "rarityValues": [
+        0,
+        0,
+        0,
+        0,
+        -1
+      ],
+      "maxRarity": 5
+    },
+    {
       "id": "DARK_COMBOS_VULNERABILITY_AMPLIFIER",
       "effectName": "Dark Combos Vulnerability Amplifier",
       "abilityClass": "DarkCombos",
@@ -3495,6 +4235,26 @@ export const ZENITH_DATA = {
         6.4,
         8,
         9.6
+      ],
+      "maxRarity": 5
+    },
+    {
+      "id": "DUMMY_DECOY_COOLDOWN",
+      "effectName": "Dummy Decoy Cooldown",
+      "abilityClass": "DummyDecoy",
+      "abilityName": "Dummy Decoy",
+      "tree": "SHADOWDANCER",
+      "singleAbilityCharm": true,
+      "isOnlyPositive": false,
+      "isPercent": true,
+      "variance": 3,
+      "effectCap": -30,
+      "rarityValues": [
+        -5,
+        -7.5,
+        -10,
+        -12.5,
+        -15
       ],
       "maxRarity": 5
     },
@@ -3599,6 +4359,26 @@ export const ZENITH_DATA = {
       "maxRarity": 5
     },
     {
+      "id": "ESCAPE_ARTIST_COOLDOWN",
+      "effectName": "Escape Artist Cooldown",
+      "abilityClass": "EscapeArtist",
+      "abilityName": "Escape Artist",
+      "tree": "SHADOWDANCER",
+      "singleAbilityCharm": true,
+      "isOnlyPositive": false,
+      "isPercent": true,
+      "variance": 3,
+      "effectCap": -30,
+      "rarityValues": [
+        -5,
+        -7.5,
+        -10,
+        -12.5,
+        -15
+      ],
+      "maxRarity": 5
+    },
+    {
       "id": "ESCAPE_ARTIST_STEALTH_DURATION",
       "effectName": "Escape Artist Stealth Duration",
       "abilityClass": "EscapeArtist",
@@ -3675,6 +4455,26 @@ export const ZENITH_DATA = {
         1,
         1.25,
         1.5
+      ],
+      "maxRarity": 5
+    },
+    {
+      "id": "PHANTOM_FORCE_COOLDOWN",
+      "effectName": "Phantom Force Cooldown",
+      "abilityClass": "PhantomForce",
+      "abilityName": "Phantom Force",
+      "tree": "SHADOWDANCER",
+      "singleAbilityCharm": true,
+      "isOnlyPositive": false,
+      "isPercent": true,
+      "variance": 3,
+      "effectCap": -30,
+      "rarityValues": [
+        -5,
+        -7.5,
+        -10,
+        -12.5,
+        -15
       ],
       "maxRarity": 5
     },
@@ -3819,6 +4619,26 @@ export const ZENITH_DATA = {
       "maxRarity": 5
     },
     {
+      "id": "FIREWORK_BLAST_COOLDOWN",
+      "effectName": "Firework Blast Cooldown",
+      "abilityClass": "FireworkBlast",
+      "abilityName": "Firework Blast",
+      "tree": "STEELSAGE",
+      "singleAbilityCharm": true,
+      "isOnlyPositive": false,
+      "isPercent": true,
+      "variance": 3,
+      "effectCap": -30,
+      "rarityValues": [
+        -5,
+        -7.5,
+        -10,
+        -12.5,
+        -15
+      ],
+      "maxRarity": 5
+    },
+    {
       "id": "FIREWORK_BLAST_DAMAGE",
       "effectName": "Firework Blast Damage",
       "abilityClass": "FireworkBlast",
@@ -3899,6 +4719,26 @@ export const ZENITH_DATA = {
       "maxRarity": 5
     },
     {
+      "id": "FOCUSED_COMBOS_HIT_REQUIREMENT",
+      "effectName": "Focused Combos Hit Requirement",
+      "abilityClass": "FocusedCombos",
+      "abilityName": "Focused Combos",
+      "tree": "STEELSAGE",
+      "singleAbilityCharm": false,
+      "isOnlyPositive": true,
+      "isPercent": false,
+      "variance": 0,
+      "effectCap": -1,
+      "rarityValues": [
+        0,
+        0,
+        0,
+        0,
+        -1
+      ],
+      "maxRarity": 5
+    },
+    {
       "id": "FOCUSED_COMBOS_DAMAGE_MULTIPLIER",
       "effectName": "Focused Combos Damage Multiplier",
       "abilityClass": "FocusedCombos",
@@ -3915,6 +4755,26 @@ export const ZENITH_DATA = {
         15,
         20,
         25
+      ],
+      "maxRarity": 5
+    },
+    {
+      "id": "GRAVITY_BOMB_COOLDOWN",
+      "effectName": "Gravity Bomb Cooldown",
+      "abilityClass": "GravityBomb",
+      "abilityName": "Gravity Bomb",
+      "tree": "STEELSAGE",
+      "singleAbilityCharm": true,
+      "isOnlyPositive": false,
+      "isPercent": true,
+      "variance": 3,
+      "effectCap": -30,
+      "rarityValues": [
+        -5,
+        -7.5,
+        -10,
+        -12.5,
+        -15
       ],
       "maxRarity": 5
     },
@@ -3955,6 +4815,26 @@ export const ZENITH_DATA = {
         20,
         25,
         30
+      ],
+      "maxRarity": 5
+    },
+    {
+      "id": "RAPID_FIRE_COOLDOWN",
+      "effectName": "Rapid Fire Cooldown",
+      "abilityClass": "RapidFire",
+      "abilityName": "Rapid Fire",
+      "tree": "STEELSAGE",
+      "singleAbilityCharm": true,
+      "isOnlyPositive": false,
+      "isPercent": true,
+      "variance": 3,
+      "effectCap": -30,
+      "rarityValues": [
+        -5,
+        -7.5,
+        -10,
+        -12.5,
+        -15
       ],
       "maxRarity": 5
     },
@@ -4015,6 +4895,26 @@ export const ZENITH_DATA = {
         0,
         0,
         50
+      ],
+      "maxRarity": 5
+    },
+    {
+      "id": "SCRAPSHOT_COOLDOWN",
+      "effectName": "Scrapshot Cooldown",
+      "abilityClass": "Scrapshot",
+      "abilityName": "Scrapshot",
+      "tree": "STEELSAGE",
+      "singleAbilityCharm": true,
+      "isOnlyPositive": false,
+      "isPercent": true,
+      "variance": 3,
+      "effectCap": -30,
+      "rarityValues": [
+        -5,
+        -7.5,
+        -10,
+        -12.5,
+        -15
       ],
       "maxRarity": 5
     },
@@ -4199,6 +5099,26 @@ export const ZENITH_DATA = {
       "maxRarity": 5
     },
     {
+      "id": "SIDEARM_COOLDOWN",
+      "effectName": "Sidearm Cooldown",
+      "abilityClass": "Sidearm",
+      "abilityName": "Sidearm",
+      "tree": "STEELSAGE",
+      "singleAbilityCharm": true,
+      "isOnlyPositive": false,
+      "isPercent": true,
+      "variance": 3,
+      "effectCap": -30,
+      "rarityValues": [
+        -5,
+        -7.5,
+        -10,
+        -12.5,
+        -15
+      ],
+      "maxRarity": 5
+    },
+    {
       "id": "SIDEARM_DAMAGE",
       "effectName": "Sidearm Damage",
       "abilityClass": "Sidearm",
@@ -4319,6 +5239,26 @@ export const ZENITH_DATA = {
       "maxRarity": 5
     },
     {
+      "id": "STEEL_STALLION_COOLDOWN",
+      "effectName": "Steel Stallion Cooldown",
+      "abilityClass": "SteelStallion",
+      "abilityName": "Steel Stallion",
+      "tree": "STEELSAGE",
+      "singleAbilityCharm": true,
+      "isOnlyPositive": false,
+      "isPercent": true,
+      "variance": 3,
+      "effectCap": -30,
+      "rarityValues": [
+        -5,
+        -7.5,
+        -10,
+        -12.5,
+        -15
+      ],
+      "maxRarity": 5
+    },
+    {
       "id": "STEEL_STALLION_HEALTH",
       "effectName": "Steel Stallion Health",
       "abilityClass": "SteelStallion",
@@ -4399,6 +5339,26 @@ export const ZENITH_DATA = {
       "maxRarity": 5
     },
     {
+      "id": "VOLLEY_COOLDOWN",
+      "effectName": "Volley Cooldown",
+      "abilityClass": "DepthsVolley",
+      "abilityName": "Volley",
+      "tree": "STEELSAGE",
+      "singleAbilityCharm": true,
+      "isOnlyPositive": false,
+      "isPercent": true,
+      "variance": 3,
+      "effectCap": -30,
+      "rarityValues": [
+        -5,
+        -7.5,
+        -10,
+        -12.5,
+        -15
+      ],
+      "maxRarity": 5
+    },
+    {
       "id": "VOLLEY_DAMAGE_MULTIPLIER",
       "effectName": "Volley Damage Multiplier",
       "abilityClass": "DepthsVolley",
@@ -4455,6 +5415,26 @@ export const ZENITH_DATA = {
         0,
         0,
         1
+      ],
+      "maxRarity": 5
+    },
+    {
+      "id": "AEROBLAST_COOLDOWN",
+      "effectName": "Aeroblast Cooldown",
+      "abilityClass": "Aeroblast",
+      "abilityName": "Aeroblast",
+      "tree": "WINDWALKER",
+      "singleAbilityCharm": true,
+      "isOnlyPositive": false,
+      "isPercent": true,
+      "variance": 3,
+      "effectCap": -30,
+      "rarityValues": [
+        -5,
+        -7.5,
+        -10,
+        -12.5,
+        -15
       ],
       "maxRarity": 5
     },
@@ -4599,6 +5579,46 @@ export const ZENITH_DATA = {
       "maxRarity": 5
     },
     {
+      "id": "DODGING_COOLDOWN",
+      "effectName": "Dodging Cooldown",
+      "abilityClass": "DepthsDodging",
+      "abilityName": "Dodging",
+      "tree": "WINDWALKER",
+      "singleAbilityCharm": false,
+      "isOnlyPositive": false,
+      "isPercent": true,
+      "variance": 3,
+      "effectCap": -30,
+      "rarityValues": [
+        -5,
+        -7.5,
+        -10,
+        -12.5,
+        -15
+      ],
+      "maxRarity": 5
+    },
+    {
+      "id": "GUARDING_BOLT_COOLDOWN",
+      "effectName": "Guarding Bolt Cooldown",
+      "abilityClass": "GuardingBolt",
+      "abilityName": "Guarding Bolt",
+      "tree": "WINDWALKER",
+      "singleAbilityCharm": true,
+      "isOnlyPositive": false,
+      "isPercent": true,
+      "variance": 3,
+      "effectCap": -30,
+      "rarityValues": [
+        -5,
+        -7.5,
+        -10,
+        -12.5,
+        -15
+      ],
+      "maxRarity": 5
+    },
+    {
       "id": "GUARDING_BOLT_DAMAGE",
       "effectName": "Guarding Bolt Damage",
       "abilityClass": "GuardingBolt",
@@ -4675,6 +5695,26 @@ export const ZENITH_DATA = {
         0,
         25,
         30
+      ],
+      "maxRarity": 5
+    },
+    {
+      "id": "LAST_BREATH_COOLDOWN",
+      "effectName": "Last Breath Cooldown",
+      "abilityClass": "LastBreath",
+      "abilityName": "Last Breath",
+      "tree": "WINDWALKER",
+      "singleAbilityCharm": true,
+      "isOnlyPositive": false,
+      "isPercent": true,
+      "variance": 3,
+      "effectCap": -30,
+      "rarityValues": [
+        -5,
+        -7.5,
+        -10,
+        -12.5,
+        -15
       ],
       "maxRarity": 5
     },
@@ -4819,6 +5859,46 @@ export const ZENITH_DATA = {
       "maxRarity": 5
     },
     {
+      "id": "ONE_WITH_THE_WIND_RANGE",
+      "effectName": "One with the Wind Range",
+      "abilityClass": "OneWithTheWind",
+      "abilityName": "One with the Wind",
+      "tree": "WINDWALKER",
+      "singleAbilityCharm": false,
+      "isOnlyPositive": true,
+      "isPercent": false,
+      "variance": 0,
+      "effectCap": -3,
+      "rarityValues": [
+        0,
+        0,
+        0,
+        -1,
+        -2
+      ],
+      "maxRarity": 5
+    },
+    {
+      "id": "SKYHOOK_COOLDOWN",
+      "effectName": "Skyhook Cooldown",
+      "abilityClass": "Skyhook",
+      "abilityName": "Skyhook",
+      "tree": "WINDWALKER",
+      "singleAbilityCharm": false,
+      "isOnlyPositive": false,
+      "isPercent": true,
+      "variance": 3,
+      "effectCap": -30,
+      "rarityValues": [
+        -5,
+        -7.5,
+        -10,
+        -12.5,
+        -15
+      ],
+      "maxRarity": 5
+    },
+    {
       "id": "SKYHOOK_CDR_PER_BLOCK",
       "effectName": "Skyhook Cooldown Reduction Per Block",
       "abilityClass": "Skyhook",
@@ -4835,6 +5915,26 @@ export const ZENITH_DATA = {
         0,
         0,
         1
+      ],
+      "maxRarity": 5
+    },
+    {
+      "id": "THUNDERCLOUD_FORM_COOLDOWN",
+      "effectName": "Thundercloud Form Cooldown",
+      "abilityClass": "ThundercloudForm",
+      "abilityName": "Thundercloud Form",
+      "tree": "WINDWALKER",
+      "singleAbilityCharm": true,
+      "isOnlyPositive": false,
+      "isPercent": true,
+      "variance": 3,
+      "effectCap": -30,
+      "rarityValues": [
+        -5,
+        -7.5,
+        -10,
+        -12.5,
+        -15
       ],
       "maxRarity": 5
     },
@@ -4939,6 +6039,26 @@ export const ZENITH_DATA = {
       "maxRarity": 5
     },
     {
+      "id": "WHIRLWIND_COOLDOWN",
+      "effectName": "Whirlwind Cooldown",
+      "abilityClass": "Whirlwind",
+      "abilityName": "Whirlwind",
+      "tree": "WINDWALKER",
+      "singleAbilityCharm": true,
+      "isOnlyPositive": false,
+      "isPercent": true,
+      "variance": 3,
+      "effectCap": -30,
+      "rarityValues": [
+        -5,
+        -7.5,
+        -10,
+        -12.5,
+        -15
+      ],
+      "maxRarity": 5
+    },
+    {
       "id": "WHIRLWIND_COOLDOWN_REDUCTION",
       "effectName": "Whirlwind Cooldown Reduction",
       "abilityClass": "Whirlwind",
@@ -4999,6 +6119,26 @@ export const ZENITH_DATA = {
       "maxRarity": 5
     },
     {
+      "id": "WINDSWEPT_COMBOS_HIT_REQUIREMENT",
+      "effectName": "Windswept Combos Hit Requirement",
+      "abilityClass": "WindsweptCombos",
+      "abilityName": "Windswept Combos",
+      "tree": "WINDWALKER",
+      "singleAbilityCharm": false,
+      "isOnlyPositive": true,
+      "isPercent": false,
+      "variance": 0,
+      "effectCap": -1,
+      "rarityValues": [
+        0,
+        0,
+        0,
+        0,
+        -1
+      ],
+      "maxRarity": 5
+    },
+    {
       "id": "WINDSWEPT_COMBOS_COOLDOWN_REDUCTION",
       "effectName": "Windswept Combos Cooldown Reduction",
       "abilityClass": "WindsweptCombos",
@@ -5055,6 +6195,26 @@ export const ZENITH_DATA = {
         20,
         25,
         30
+      ],
+      "maxRarity": 5
+    },
+    {
+      "id": "WIND_WALK_COOLDOWN",
+      "effectName": "Wind Walk Cooldown",
+      "abilityClass": "DepthsWindWalk",
+      "abilityName": "Depths Wind Walk",
+      "tree": "WINDWALKER",
+      "singleAbilityCharm": true,
+      "isOnlyPositive": false,
+      "isPercent": true,
+      "variance": 3,
+      "effectCap": -30,
+      "rarityValues": [
+        -5,
+        -7.5,
+        -10,
+        -12.5,
+        -15
       ],
       "maxRarity": 5
     },

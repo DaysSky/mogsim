@@ -62,6 +62,9 @@ function parseAbilityMetadata(fileText, className) {
 	const abilityNameMatch = fileText.match(
 		/public\s+static\s+final\s+String\s+ABILITY_NAME\s*=\s*"([^"]+)"/,
 	);
+	const cooldownEffectNameMatch = fileText.match(
+		/public\s+static\s+final\s+String\s+CHARM_COOLDOWN\s*=\s*"([^"]+)"/,
+	);
 	const singleCharmMatch = fileText.match(/\.singleCharm\((true|false)\)/);
 	const abilityName = abilityNameMatch
 		? abilityNameMatch[1]
@@ -69,6 +72,9 @@ function parseAbilityMetadata(fileText, className) {
 	return {
 		tree: treeMatch[1],
 		abilityName,
+		cooldownEffectName: cooldownEffectNameMatch
+			? cooldownEffectNameMatch[1]
+			: `${abilityName} Cooldown`,
 		singleAbilityCharm: singleCharmMatch
 			? parseBool(singleCharmMatch[1])
 			: true,
@@ -126,7 +132,7 @@ async function collectAbilityInfo() {
 
 function parseCharmEffects(sourceText, abilityMap) {
 	const effectRegex =
-		/([A-Z0-9_]+)\("([^"]+)",\s*([A-Za-z0-9_]+)\.INFO,\s*(true|false),\s*(true|false),\s*([0-9.]+),\s*([0-9.]+),\s*new\s+double\[\]\s*\{([^}]*)\}\)/g;
+		/([A-Z0-9_]+)\(\s*(?:"([^"]+)"|([A-Za-z0-9_]+)\.CHARM_COOLDOWN)\s*,\s*([A-Za-z0-9_]+)\.INFO,\s*(true|false),\s*(true|false),\s*([-+]?[0-9]*\.?[0-9]+),\s*([-+]?[0-9]*\.?[0-9]+),\s*new\s+double\[\]\s*\{([^}]*)\}\)/g;
 	const capRegex =
 		/extraRarityCaps\.put\(([A-Z0-9_]+)\.mEffectName,\s*(\d+)\);/g;
 	const rarityCaps = new Map();
@@ -140,7 +146,8 @@ function parseCharmEffects(sourceText, abilityMap) {
 		const [
 			,
 			id,
-			effectName,
+			effectNameRaw,
+			cooldownClass,
 			abilityClass,
 			onlyPositiveRaw,
 			isPercentRaw,
@@ -152,6 +159,12 @@ function parseCharmEffects(sourceText, abilityMap) {
 		if (!abilityMeta || !ownableTrees.includes(abilityMeta.tree)) {
 			continue;
 		}
+
+		const cooldownMeta = abilityMap.get(cooldownClass || abilityClass);
+		const effectName =
+			effectNameRaw ||
+			cooldownMeta?.cooldownEffectName ||
+			abilityMeta.cooldownEffectName;
 
 		const rarityValues = parseNumberList(rarityValuesRaw);
 		effects.push({
