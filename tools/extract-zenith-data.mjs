@@ -62,13 +62,17 @@ function parseAbilityMetadata(fileText, className) {
 	const abilityNameMatch = fileText.match(
 		/public\s+static\s+final\s+String\s+ABILITY_NAME\s*=\s*"([^"]+)"/,
 	);
+	const inlineAbilityNameMatch = fileText.match(
+		/new\s+DepthsAbilityInfo<[^>]*>\(\s*[^,]+,\s*"([^"]+)"/,
+	);
 	const cooldownEffectNameMatch = fileText.match(
 		/public\s+static\s+final\s+String\s+CHARM_COOLDOWN\s*=\s*"([^"]+)"/,
 	);
 	const singleCharmMatch = fileText.match(/\.singleCharm\((true|false)\)/);
-	const abilityName = abilityNameMatch
-		? abilityNameMatch[1]
-		: splitWordsFromClassName(className);
+	const abilityName =
+		abilityNameMatch?.[1] ||
+		inlineAbilityNameMatch?.[1] ||
+		splitWordsFromClassName(className);
 	return {
 		tree: treeMatch[1],
 		abilityName,
@@ -114,7 +118,9 @@ async function collectAbilityInfo() {
 			continue;
 		}
 
-		const classMatch = fileText.match(/public\s+class\s+([A-Za-z0-9_]+)/);
+		const classMatch = fileText.match(
+			/public\s+(?:final\s+)?class\s+([A-Za-z0-9_]+)/,
+		);
 		if (!classMatch) {
 			continue;
 		}
