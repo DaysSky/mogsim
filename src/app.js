@@ -1,4 +1,4 @@
-import { ZENITH_DATA } from "./zenith-data.js";
+import { ZENITH_DATA } from "./zenith-data.js?v=20260223-1";
 
 const CHARM_BUDGET_PER_POWER = [2, 4, 7, 11, 16];
 const CHARM_BUDGET_PER_LEVEL = [2, 3, 4, 5, 6];
