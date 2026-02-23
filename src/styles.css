@@ -41,6 +41,34 @@ h1 {
 	margin-bottom: 1rem;
 }
 
+.roll-tools {
+	display: flex;
+	align-items: center;
+	gap: 0.6rem;
+	flex-wrap: wrap;
+	margin-bottom: 1rem;
+}
+
+.roll-counter {
+	margin: 0;
+	font-size: 0.95rem;
+	font-weight: 600;
+	color: #f4f7fb;
+	background: #1f2a38;
+	border: 1px solid #4a5d75;
+	border-radius: 6px;
+	padding: 0.35rem 0.6rem;
+	display: inline-block;
+}
+
+.roll-reset-button {
+	width: auto;
+	min-height: 0;
+	padding: 0.35rem 0.8rem;
+	align-self: center;
+	border-radius: 6px;
+}
+
 label {
 	display: grid;
 	gap: 0.25rem;

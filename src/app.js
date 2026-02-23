@@ -110,9 +110,15 @@ const form = document.querySelector("#roller-form");
 const treeSelect = document.querySelector("#tree");
 const result = document.querySelector("#result");
 const upgradeButton = document.querySelector("#upgrade-button");
+const rollTools = ensureRollToolsContainer();
+const rollCounter = ensureRollCounterElement(rollTools);
+const resetButton = ensureResetButton(rollTools);
 let currentCharm = null;
 let currentUpgradePreview = null;
 let upgradePreviewActive = false;
+let rollCount = 0;
+
+updateRollCounter();
 
 for (const treeKey of ZENITH_DATA.ownableTrees) {
 	const option = document.createElement("option");
@@ -123,7 +129,13 @@ for (const treeKey of ZENITH_DATA.ownableTrees) {
 
 form.addEventListener("submit", (event) => {
 	event.preventDefault();
+	incrementRollCounter();
 	rollAndRender();
+});
+
+resetButton.addEventListener("click", () => {
+	rollCount = 0;
+	updateRollCounter();
 });
 
 upgradeButton.addEventListener("click", () => {
@@ -146,12 +158,111 @@ function rollAndRender() {
 		}
 	}
 
+	clearCurrentCharmState();
+	renderError("Unable to roll a valid charm after rerolling.");
+}
+
+function incrementRollCounter() {
+	rollCount += 1;
+	updateRollCounter();
+}
+
+function updateRollCounter() {
+	if (!rollCounter) {
+		return;
+	}
+
+	rollCounter.textContent = `Rolls: ${rollCount}`;
+}
+
+function ensureRollToolsContainer() {
+	const existingTools = document.querySelector("#roll-tools");
+	if (existingTools) {
+		existingTools.classList.add("roll-tools");
+		return existingTools;
+	}
+
+	const tools = document.createElement("div");
+	tools.id = "roll-tools";
+	tools.className = "roll-tools";
+
+	if (form) {
+		form.insertAdjacentElement("afterend", tools);
+	} else {
+		document.body.prepend(tools);
+	}
+
+	return tools;
+}
+
+function ensureResetButton(toolsContainer) {
+	const existingResetButton = document.querySelector("#reset-button");
+	if (existingResetButton) {
+		existingResetButton.type = "button";
+		existingResetButton.classList.add("roll-reset-button");
+		applyResetButtonInlineStyles(existingResetButton);
+		if (existingResetButton.parentElement !== toolsContainer) {
+			toolsContainer.append(existingResetButton);
+		}
+		return existingResetButton;
+	}
+
+	const createdResetButton = document.createElement("button");
+	createdResetButton.id = "reset-button";
+	createdResetButton.type = "button";
+	createdResetButton.className = "roll-reset-button";
+	createdResetButton.textContent = "Reset";
+	applyResetButtonInlineStyles(createdResetButton);
+	toolsContainer.append(createdResetButton);
+	return createdResetButton;
+}
+
+function ensureRollCounterElement(toolsContainer) {
+	const existingCounter = document.querySelector("#roll-counter");
+	if (existingCounter) {
+		existingCounter.classList.add("roll-counter");
+		applyCounterInlineStyles(existingCounter);
+		if (existingCounter.parentElement !== toolsContainer) {
+			toolsContainer.prepend(existingCounter);
+		}
+		return existingCounter;
+	}
+
+	const counter = document.createElement("p");
+	counter.id = "roll-counter";
+	counter.className = "roll-counter";
+	counter.textContent = "Rolls: 0";
+	applyCounterInlineStyles(counter);
+	toolsContainer.prepend(counter);
+
+	return counter;
+}
+
+function applyCounterInlineStyles(counterElement) {
+	counterElement.style.display = "inline-block";
+	counterElement.style.margin = "0";
+	counterElement.style.padding = "0.35rem 0.6rem";
+	counterElement.style.border = "1px solid #4a5d75";
+	counterElement.style.borderRadius = "6px";
+	counterElement.style.background = "#1f2a38";
+	counterElement.style.color = "#f4f7fb";
+	counterElement.style.fontWeight = "600";
+}
+
+function applyResetButtonInlineStyles(buttonElement) {
+	buttonElement.style.width = "auto";
+	buttonElement.style.minHeight = "0";
+	buttonElement.style.padding = "0.35rem 0.8rem";
+	buttonElement.style.borderRadius = "6px";
+	buttonElement.style.alignSelf = "center";
+}
+
+function clearCurrentCharmState() {
 	currentCharm = null;
 	currentUpgradePreview = null;
 	upgradePreviewActive = false;
 	upgradeButton.disabled = true;
 	upgradeButton.classList.remove("active");
-	renderError("Unable to roll a valid charm after rerolling.");
 }
 
 function readFormValues() {
