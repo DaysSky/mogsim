@@ -3,8 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Monumenta Zenith mog simulator"
+    />
+    <meta name="robots" content="index,follow" />
+    <meta name="theme-color" content="#1f1f1f" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Zenith Charm Roller" />
+    <meta
+      property="og:description"
+      content="Monumenta Zenith mog simulator"
+    />
+    <meta property="og:site_name" content="Zenith Charm Roller" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Zenith Charm Roller" />
+    <meta
+      name="twitter:description"
+      content="Monumenta Zenith mog simulator"
+    />
+    <link rel="canonical" href="/" />
     <title>Zenith Charm Roller</title>
     <link rel="icon" href="data:," />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Zenith Charm Roller",
+        "applicationCategory": "GameApplication",
+        "operatingSystem": "Web Browser",
+        "description": "Monumenta Zenith mog simulator"
+      }
+    </script>
     <script>
       window.__assetVersion = Date.now().toString();
       const stylesheet = document.createElement("link");
@@ -16,6 +46,10 @@
   <body>
     <main class="page">
       <h1>Zenith Charm Roller</h1>
+      <p class="sr-only">
+        Roll Monumenta Zenith charms and inspect roll quality, budget usage, and
+        upgrade previews.
+      </p>
       <form id="roller-form" class="controls">
         <label>
           Rarity
@@ -58,5 +92,8 @@
       appScript.src = `./src/app.js?v=${window.__assetVersion}`;
       document.body.append(appScript);
     </script>
+    <noscript>
+      This tool requires JavaScript to roll and render charms.
+    </noscript>
   </body>
 </html>
